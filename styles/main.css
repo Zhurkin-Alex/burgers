@@ -507,7 +507,7 @@ body {
 }
 
 .promo {
-  background: url("../../img/bagground/video-bg.png") center center/cover no-repeat;
+  background: url("../img/bagground/video-bg.png") center center/cover no-repeat;
   position: relative;
 }
 
@@ -700,7 +700,7 @@ body {
 
 .form__row {
   display: flex;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .form__row-radio {
