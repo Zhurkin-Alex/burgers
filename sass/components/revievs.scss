@@ -38,3 +38,31 @@
  padding: 50px 20px;
  transition: opacity .4s;
 }
+
+.revievs__name{
+  color: $white;
+font-family: Gagalin;
+font-size: 14px;
+font-weight: 400;
+line-height: 1;
+}
+.revievs__text{
+  padding-top: 30px;
+  
+  color: $white;
+  font-family: Ubuntu;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+  
+}
+.revievs__btn{
+  margin-top: 17px;
+  border:none;
+  color: $white;
+  font-family: Ubuntu;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1;
+  text-transform: uppercase;
+}
