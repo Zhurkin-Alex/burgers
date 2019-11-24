@@ -1,0 +1,38 @@
+
+// devaise $
+// colors
+// base для контейнера, для всего сайта
+
+//colors
+$orange: #e45028;
+$yellow: #f9b43b;
+$black: #2f3234;
+$red: #e35028;
+$white: #fff;
+
+
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a{
+  margin:0;
+  padding: 0;
+}
+
+ul {
+  padding-left: 0; /* Сдвигаем список влево */
+}
+li {
+  list-style-type: none; /* Убираем маркеры */
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: normal;
+}

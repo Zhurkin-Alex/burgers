@@ -1,0 +1,16 @@
+// Settings
+@import 'settings/normolize';
+@import 'settings/wars';
+@import 'settings/mixin';
+@import 'settings/font';
+@import 'settings/base';
+
+
+// components
+// импортируем каждый блок либо элемент отдельно из папки komponents
+@import 'components/header';
+@import 'components/nav';
+@import 'components/btn';
+@import 'components/promo';
+@import 'components/webest';
+@import 'components/revievs';

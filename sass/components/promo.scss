@@ -1,0 +1,52 @@
+.promo{
+  // background-image: url("../../img/bagground/video-bg.png");
+  // background-repeat: no-repeat;
+  // border-style: cover;
+  // background-position: center center;
+  background: url("../../img/bagground/video-bg.png") center center/cover no-repeat;
+  position: relative;
+}
+.promo__container{
+  height: 100%;
+  display: flex;
+}
+
+.promo__content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65%;
+}
+.promo__middle{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-top: 144px;
+}
+.promo__title{
+  margin-left: 11px;
+  margin-right: 139px;
+}
+.promo__sibtitle{
+  // margin-top: 40px;
+  font-family: 'Lifehack';
+  // font-weight: 500;
+  // font-size:56px;
+  // line-height: 85px;
+  font-size: 65px;
+ line-height: 1;
+  line-height: 85px;
+  color:$white;
+}
+.promo__scrol-btn{
+  width: 29px;
+  height: 15px;
+  background-image: url("../../icons/arrow-scroll.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  position: absolute;
+  bottom: 41px;
+  left: 50%;
+  transform: translateX(-50%);
+}
