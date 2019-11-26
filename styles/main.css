@@ -548,7 +548,7 @@ body {
 .promo__scroll-btn {
   width: 29px;
   height: 15px;
-  background-image: url("../../img/icons/arrow-scroll.svg");
+  background-image: url("../img/icons/arrow-scroll.svg");
   background-repeat: no-repeat;
   background-size: contain;
   display: block;
