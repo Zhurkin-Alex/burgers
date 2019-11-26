@@ -465,17 +465,17 @@ body {
   margin-left: 15px;
 }
 
-.nav__list {
+.header__list {
   display: flex;
   align-items: center;
 }
 
-.nav__item {
+.header__item {
   display: flex;
   align-items: center;
   margin-right: 16px;
 }
-.nav__item:after {
+.header__item:after {
   content: "";
   width: 5px;
   height: 5px;
@@ -484,11 +484,11 @@ body {
   display: block;
   margin-left: 16px;
 }
-.nav__item:nth-last-child(2):after {
+.header__item:nth-last-child(2):after {
   display: none;
 }
 
-.nav__link {
+.header__link {
   text-decoration: none;
   color: #fff;
   font-family: Ubuntu;
@@ -502,12 +502,17 @@ body {
   border-radius: 5px;
   color: #fff;
   font-family: Ubuntu;
+  font-weight: 500;
   font-size: 13px;
   text-transform: uppercase;
+  text-decoration: none;
+}
+.btn:hover {
+  background-color: #c1401e;
 }
 
 .promo {
-  background: url("../img/bagground/video-bg.png") center center/cover no-repeat;
+  background: url("../img/bagground/bg_first_list.png") center center/cover no-repeat;
   position: relative;
 }
 
@@ -540,10 +545,10 @@ body {
   color: #fff;
 }
 
-.promo__scrol-btn {
+.promo__scroll-btn {
   width: 29px;
   height: 15px;
-  background-image: url("../../icons/arrow-scroll.svg");
+  background-image: url("../../img/icons/arrow-scroll.svg");
   background-repeat: no-repeat;
   background-size: contain;
   display: block;
@@ -560,10 +565,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-.webest__content {
-  padding-top: 100px;
 }
 
 .webest__list {
