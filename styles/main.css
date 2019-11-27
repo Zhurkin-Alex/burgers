@@ -796,7 +796,7 @@ body {
 
 .team {
   position: relative;
-  background: url(../../img/bagground/team.png) center center/cover no-repeat;
+  background: url(../img/bagground/team.png) center center/cover no-repeat;
 }
 
 .team__section {
