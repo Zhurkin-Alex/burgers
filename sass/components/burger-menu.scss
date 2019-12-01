@@ -1,0 +1,14 @@
+.burger__menu {
+ margin-left: rem(30px);
+  display: none;
+  @include tablets {
+    display: initial;
+    margin-right: rem(33px);
+  }
+  @include phones {
+    display: initial;
+    margin-right: rem(24px);
+
+  }
+
+}

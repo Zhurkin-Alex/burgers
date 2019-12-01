@@ -11,8 +11,15 @@
 
 }
 .order_title{
-  padding-top: 138px;
-  margin-bottom: 44px;
+  padding-top: rem(138px);
+  margin-bottom: rem(44px);  
+@include tablets{
+  padding-top: rem(152px);
+  margin-bottom: rem(49px);  
+}
+@include phones {
+  font-size: 50px;
+}
 }
 
 .form{
@@ -20,53 +27,97 @@
 }
 .form__order{
   display: flex;
+  @include tablets{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 rem(150px);
+    @include phones {
+      margin: 0;
+    }
+  }
 }
 .form__coll{
   width: 50%;
-  margin-right: 20px;
+  margin-right: rem(20px);
+  @include tablets{
+  width: 100%;
+  margin-right: 0;
+  }
 }
 .form__row{
   display: flex;
-  margin-bottom: 40px;
+  margin-bottom: rem(20px);
+ &-radio{
+  justify-content: flex-start;
+  margin-bottom: rem(30px); 
+ }
+ &-afte{
+  margin-bottom: rem(20px);
+ }
 }
 .form__row-radio{
-  justify-content: flex-start; 
+  @include phones {
+    justify-content: center;
+  }
+}
+.form__row-afte{
+  @include phones {
+    justify-content: center;
+  }
+}
+.form__row-buttons{
+  @include phones {
+    justify-content: center;
+  }
+}
+
+
+.order__button{
+  outline: none;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  text-transform: uppercase;
 }
 .form__labal{
   display: block;
   width: 100%;
   flex: 1;
-  margin-left: 19px;
+  margin-left: rem(19px);
+  &:first-child {
+    margin-left: 0;
+  }
 }
-.form__labal:first-child {
-  margin-left: 0;
-}
+// .form__labal:first-child {
+//   margin-left: 0;
+// }
 .form__label-title{
   color: $white;
   font-family: Ubuntu;
-  font-size: 14px;
+  font-size: rem(14px);
   font-weight: 300;
   line-height: 1;
-  margin-left: 1px;
-  margin-bottom: 9px;
+  margin-left: rem(1px);
+  margin-bottom: rem(9px);
 }
 .form__label-input{
-  border: 1px solid $order;
-  border-radius: 5px;
-  padding: 5px;
+  border: rem(1px) solid $order;
+  border-radius: rem(5px);
+  padding: rem(5px);
   width: 100%;
   &:hover{
     border-color:$yellow ;
   }
 }
 .form__label-input-textarea{
-  height: 109px;
+  height: rem(109px);
   resize: none;
 }
 .form__radio{
   position: relative;
   white-space: nowrap;
-  margin-right: 20px;
+  margin-right: rem(20px);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -76,8 +127,8 @@
 }
 
 .radio__item-fake {
-  width: 15px;
-  height: 15px;
+  width: rem(15px);
+  height: rem(15px);
   border-radius: 50%;
   // background: $white;
   position: relative;
@@ -86,4 +137,38 @@
 
 .form__label-title-radio {
   margin-bottom: 0;
+}
+.order__link {
+  display: inline-block;  
+  text-decoration: none;
+  background-color: $orange;
+  border-radius: rem(5px);
+  padding: rem(11px) rem(15px);  
+  color: $white; 
+  font-family: Ubuntu; 
+  font-size: rem(13px);
+  font-weight: 500;
+  transform: scale(1);
+  transition: 0.4s;
+
+  &:hover {
+    background-color: darken($orange, 10%);
+   
+  }
+}
+
+.reset__button {
+  margin-left: rem(20px);
+  font-family: "Ubuntu Light", sans-serif;
+  font-size: rem(14px);
+  color: $white;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+
+  &:hover {
+    text-decoration: underline;
+    
+  }
 }

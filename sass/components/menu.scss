@@ -5,7 +5,7 @@
   @include bg-image('../img/bagground/menu.png', cover);
   &__item:hover{
       .menu__content-wrap{
-          width: 540px;
+          width: rem(540px);
       }
       .menu__trigger-text{
           color:$yellow;
@@ -17,7 +17,7 @@
   }
   &__trigger{
       position: relative;
-      width: 80px;
+      width: rem(80px);
       background-size: cover;
       background-repeat: no-repeat;
       display: flex;
@@ -28,9 +28,9 @@
           align-items: center;
           transform: rotate(-90deg);
           white-space: nowrap;
-          font-size: 40px;
+          font-size: rem(40px);
           color: $white;
-          height: 80px;
+          height: rem(80px);
           transform-origin: 0 0;
           position: relative;
       }
@@ -51,11 +51,11 @@
       width: 0;
   }
   &__content{
-      padding: 62px 33px;
+      padding: rem(62px) rem(33px);
       background: rgba(#2f3234, .93);
       height: 100%;
       box-sizing: border-box;
-      min-width: 540px;
+      min-width: rem(540px);
   }
   &__desc{
       color: $white;
@@ -67,6 +67,9 @@
 }
 .menu__title{
   color: $white;
-  padding-top: 111px;
-  padding-left: 102px;
+  padding-top: rem(111px);
+  padding-left: rem(102px);
+  @include phones {
+      padding: rem(60px);
+    }
 }

@@ -14,41 +14,53 @@
   top: 0;
   right: 0;
   bottom: 0;
+  @include tablets{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .team__content {
   display: flex;
   flex-direction: column;
-  margin-left: 97px;
+  margin-left: rem(97px);
+  @include tablets{
+   margin: 0;
+   text-align:center;
+  }
 }
 .team__title{
-  padding-top: 113px;
-  padding-bottom: 46px;
+  padding-top: rem(113px);
+  padding-bottom: rem(46px);
 }
 .accordeon__list {
   color: $white;
 }
 .accordeon__item:not(:last-child) {
-  margin-bottom: 35px;
+  margin-bottom: rem(35px);
 }
 
 .accordeon__title {
   position: relative;
-  padding-bottom: 17px;
+  padding-bottom: rem(17px);
   font-family: Gagalin;
-  font-size: 14px;
+  font-size: rem(14px);
   cursor: pointer;
   display: inline-block;
 
   &::before{
     position: absolute;
     content: "";
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 5px solid $yellow;
-    top: 9px;
-    left: -15px;
+    border-left: rem(5px) solid transparent;
+    border-right: rem(5px) solid transparent;
+    border-top: rem(5px) solid $yellow;
+    top: rem(9px);
+    left: rem(-15px);
     transition: 0.5s;
+  }
+  @include tablets{
+   font-size: rem(25px);
   }
 }
 .accordeon__info {
@@ -60,25 +72,25 @@
 .accordeon__img {
   border-radius: 50%;
   overflow: hidden;
-  height: 100px;
-  width: 100px;
+  height: rem(100px);
+  width: rem(100px);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
 }
 .accordeon__section {
-  margin-left: 21px;
-  max-width: 209px;
+  margin-left: rem(21px);
+  max-width: rem(209px);
 }
 .accordeon__work {
-  padding-bottom: 22px;
+  padding-bottom: rem(22px);
   font-family: Ubuntu;
   font-weight: bold;
-  font-size: 14px;
+  font-size: rem(14px);
 }
 .accordeon__text {
   font-family: Ubuntu;
   font-weight: 300;
-  font-size: 14px;
-  line-height: 24.01px;
+  font-size: rem(14px);
+  line-height: rem(24px);
 }

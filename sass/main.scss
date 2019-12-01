@@ -1,9 +1,12 @@
 // Settings
+
 @import 'settings/normolize';
 @import 'settings/wars';
+@import 'settings/media';
 @import 'settings/mixin';
 @import 'settings/font';
 @import 'settings/base';
+
 
 
 // components
@@ -18,4 +21,6 @@
 @import 'components/fixed-menu';
 @import 'components/team-okordion';
 @import 'components/menu';
+@import 'components/location';
+@import 'components/burger-menu';
 

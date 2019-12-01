@@ -15,46 +15,71 @@
   display:  flex;
   justify-content: center;
   align-items: center;
+  flex-grow: 1;
   // height: 65%;
 }
 .promo__middle{
   display: flex;
   align-items: center;
   width: 100%;
-  // padding-top: 144px;
+  @include tablets{
+    display: flex;
+    flex-direction: column;
+  }
 }
-// .promo__text{
-//   position: relative;
-// }
+.promo__logo,
+.promo__text{
+  flex: 1;
+}
+.promo__img{
+  @include tablets {
+    width: 70%;
+    height: 70%;
+    // margin: 0 auto; 
+  } 
+}
+.promo__logo{
+  @include tablets {
+    justify-content: center;
+    display: flex;
+  } 
+}
+.promo__text{
+  width: rem(415px);
+  @include tablets {
+    text-align: center;
+    padding-top: rem(40px);
+  } 
+  @include phones{
+    padding-top: rem(52px);
+  }
+}
  .promo__title{
-  margin-left: 11px;
-  // position: absolute;
-  //   top: 50%;
-  //   left: 50%;
-  //   margin-right: -50%;
-  //   transform: translate(-50%, -50%)
-  // margin-right: 139px;
+  margin-left: rem(11px);
+  @include tablets{
+    margin: 0;
+  }
 }
 .promo__sibtitle{
-  // margin-top: 40px;
   font-family: 'Lifehack';
-  // font-weight: 500;
-  // font-size:56px;
-  // line-height: 85px;
-  font-size: 65px;
+  font-size: rem(65px);
  line-height: 1;
-  line-height: 85px;
+  line-height: rem(85px);
   color:$white;
+  
+@include tablets{
+  padding-top: rem(45px);
+}
 }
 .promo__scroll-btn{
-  width: 29px;
-  height: 15px;
+  width: rem(29px);
+  height: rem(15px);
   background-image: url("../img/icons/arrow-scroll.svg");
   background-repeat: no-repeat;
   background-size: contain;
   display: block;
   position: absolute;
-  bottom: 41px;
+  bottom: rem(41px);
   left: 50%;
   transform: translateX(-50%);
 }
