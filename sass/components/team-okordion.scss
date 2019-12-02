@@ -24,7 +24,7 @@
 .team__content {
   display: flex;
   flex-direction: column;
-  margin-left: rem(97px);
+  padding-left: rem(97px);
   @include tablets{
    margin: 0;
    text-align:center;

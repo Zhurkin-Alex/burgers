@@ -5,16 +5,23 @@
   @include bg-image('../img/bagground/menu.png', cover);
   &__item:hover{
       .menu__content-wrap{
-          width: rem(540px);
+          width: rem(540px);     
+ 
       }
       .menu__trigger-text{
           color:$yellow;
       }
   }
+  
   &__list, &__item{
       height: 100%;
       display: flex;
   }
+  &__item{
+    // @include tablets{
+    // position: absolute;
+    // } 
+   }
   &__trigger{
       position: relative;
       width: rem(80px);
@@ -24,15 +31,19 @@
       align-items: flex-end;
       text-decoration: none;
       &-text{
-          display: flex;
-          align-items: center;
-          transform: rotate(-90deg);
-          white-space: nowrap;
-          font-size: rem(40px);
-          color: $white;
-          height: rem(80px);
-          transform-origin: 0 0;
-          position: relative;
+        display: flex;
+        align-items: center;
+        transform: rotate(-90deg);
+        white-space: nowrap;
+        font-size: rem(40px);
+        font-family: Gagalin;
+        font-weight: 400;
+        line-height: 63.75px;
+        color: $white;
+        height: rem(80px);
+        transform-origin: 0 0;
+        position: relative;
+        top:rem(39px);
       }
       &::before{
           content: '';
@@ -49,6 +60,8 @@
       overflow: hidden;
       transition: .5s;
       width: 0;
+
+     
   }
   &__content{
       padding: rem(62px) rem(33px);
@@ -73,3 +86,10 @@
       padding: rem(60px);
     }
 }
+.menu__content-wrap{
+    @include tablets{
+        width: rem(706px);
+    z-index: 3;
+    }          
+}
+        

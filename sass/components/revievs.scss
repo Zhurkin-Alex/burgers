@@ -39,7 +39,7 @@
  bottom: 0;
  left: 0;
  background-color: rgba($black, 0.3 );
- padding: rem(55px) rem(30px);
+ padding: rem(50px) rem(33px) rem(50px) rem(20px);
  transition: opacity .4s;
  @include tablets{
   text-align: center;
@@ -63,7 +63,7 @@ line-height: 1;
   font-weight: 300;
   line-height: rem(24px);
   @include tablets{
-   padding-top: 20px;
+   padding-top: rem(20px);
   }
 
 }
@@ -77,3 +77,5 @@ line-height: 1;
   line-height: 1;
   // text-transform: uppercase;
 }
+
+

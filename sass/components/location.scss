@@ -15,7 +15,7 @@ position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: rem(60px);
+  // height: rem(60px);
   @include phones {
     flex-direction: column;
     text-align: center;
@@ -36,7 +36,8 @@ position: relative;
 .contacs__adress{
   color: $white;
   font-size: rem(14px);
-  font-family: "Ubuntu Light";
+  font-family: "Ubuntu";
+  font-weight: 300;
   margin-bottom: rem(10px);
 }
 .contacs__svg{
@@ -49,7 +50,7 @@ position: relative;
   text-decoration: none;
   color: $orange;
   font-size: rem(14px);
-  font-family: "Ubuntu Bold", sans-serif;
+  font-family: "Ubuntu Bold";
   font-weight: bold;
 
   &:hover {
@@ -70,12 +71,19 @@ position: relative;
 }
 .socials__link{
   text-decoration: none;
+  margin-right: rem(20px);
+  &:nth-last-child(1){
+    margin-right: 0;
+  }
+}
+.socials__list{
+display: flex;
 }
 .socials__pic {
   width: rem(21px);
   height: rem(21px);
   fill: #5b5b5b;
-  margin-right: rem(20px);  
+    
 
   &-tw {
     margin-right: 0;

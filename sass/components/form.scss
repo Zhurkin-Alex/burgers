@@ -40,6 +40,9 @@
 .form__coll{
   width: 50%;
   margin-right: rem(20px);
+  &:nth-child(2){
+    margin-right: 0;
+  }
   @include tablets{
   width: 100%;
   margin-right: 0;
