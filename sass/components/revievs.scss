@@ -67,6 +67,9 @@ line-height: 1;
   }
 
 }
+.revievs__batton{
+  display: inline-block;
+}
 .revievs__btn{
   margin-top: rem(17px);
   border:none;
@@ -76,6 +79,12 @@ line-height: 1;
   font-weight: 500;
   line-height: 1;
   // text-transform: uppercase;
+}
+.revievs__btn-phones{
+  display: none;
+  @include phones {
+    display: inline-block;
+  }
 }
 
 

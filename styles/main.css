@@ -803,11 +803,24 @@ body {
   }
 }
 
+.revievs__batton {
+  display: inline-block;
+}
+
 .revievs__btn {
   margin-top: 1.0625rem;
   border: none;
   font-weight: 500;
   line-height: 1;
+}
+
+.revievs__btn-phones {
+  display: none;
+}
+@media screen and (max-width: 480px) {
+  .revievs__btn-phones {
+    display: inline-block;
+  }
 }
 
 .order {
@@ -1155,12 +1168,28 @@ body {
 .menu__item:hover .menu__content-wrap {
   width: 33.75rem;
 }
+@media screen and (max-width: 768px) {
+  .menu__item:hover .menu__content-wrap {
+    width: 34.375rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .menu__item:hover .menu__content-wrap {
+    width: 17rem;
+  }
+}
 .menu__item:hover .menu__trigger-text {
   color: #f9b43b;
 }
 .menu__list, .menu__item {
   height: 100%;
   display: flex;
+}
+.menu__list {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
 }
 .menu__trigger {
   position: relative;
@@ -1208,11 +1237,17 @@ body {
   box-sizing: border-box;
   min-width: 33.75rem;
 }
+@media screen and (max-width: 480px) {
+  .menu__content {
+    min-width: 17.75rem;
+  }
+}
 .menu__desc {
   color: #fff;
 }
 
 .menu-section-row {
+  position: relative;
   flex-direction: row;
   justify-content: space-between;
 }
@@ -1225,13 +1260,6 @@ body {
 @media screen and (max-width: 480px) {
   .menu__title {
     padding: 3.75rem;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .menu__content-wrap {
-    width: 44.125rem;
-    z-index: 3;
   }
 }
 

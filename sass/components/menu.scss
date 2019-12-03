@@ -5,7 +5,14 @@
   @include bg-image('../img/bagground/menu.png', cover);
   &__item:hover{
       .menu__content-wrap{
-          width: rem(540px);     
+          width: rem(540px); 
+          @include tablets{
+              width:rem(550px);
+            }
+            @include phones {
+                width: rem(272px);
+            }
+             
  
       }
       .menu__trigger-text{
@@ -17,11 +24,13 @@
       height: 100%;
       display: flex;
   }
-  &__item{
-    // @include tablets{
-    // position: absolute;
-    // } 
+  &__list{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
    }
+  
   &__trigger{
       position: relative;
       width: rem(80px);
@@ -69,12 +78,17 @@
       height: 100%;
       box-sizing: border-box;
       min-width: rem(540px);
+      @include phones {
+        min-width: rem(284px);   
+    }
+
   }
   &__desc{
       color: $white;
   }
 }
 .menu-section-row{
+  position: relative;
   flex-direction: row;
   justify-content: space-between;
 }
@@ -86,10 +100,4 @@
       padding: rem(60px);
     }
 }
-.menu__content-wrap{
-    @include tablets{
-        width: rem(706px);
-    z-index: 3;
-    }          
-}
-        
+     
