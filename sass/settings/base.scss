@@ -6,6 +6,9 @@ html{
   @include tablets {
     font-size: 15px;
   }
+  @include phones {
+    font-size: 14px;
+  }
 }
 
 html,
