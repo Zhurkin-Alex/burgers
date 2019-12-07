@@ -498,12 +498,12 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  .header__navigation {
+  .header__nav {
     display: none;
   }
 }
 @media screen and (max-width: 480px) {
-  .header__navigation {
+  .header__nav {
     display: none;
   }
 }
@@ -539,6 +539,53 @@ body {
 
 .header__btn {
   margin-left: 0.9375rem;
+}
+
+.header_fullcreen .header__nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 45;
+}
+.header_fullcreen .header__list {
+  flex-direction: column;
+}
+.header_fullcreen .header__list .header__item {
+  flex-direction: column;
+  margin-right: 0;
+}
+.header_fullcreen .header__list .header__item::after {
+  margin: 1.625rem 0;
+}
+.header_fullcreen .header__list .header__link {
+  font-family: Ubuntu;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 2.5rem;
+}
+.header_fullcreen .logo__img {
+  position: fixed;
+  top: 0.75rem;
+  left: 1.1875rem;
+  z-index: 46;
+}
+
+.header__close {
+  position: absolute;
+  top: 1.9375rem;
+  right: 1.1875rem;
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .header__close {
+    display: flex;
+  }
 }
 
 .btn {
@@ -989,10 +1036,15 @@ body {
   height: 0.4375rem;
 }
 
+.order__radio > .order__radio-elem:checked + .order__radio-fake-check:after {
+  width: 0.6875rem;
+  height: 0.5625rem;
+}
+
 .order__radio_checkbox .order__radio-fake {
   border-radius: 0rem;
 }
-.order__radio_checkbox .order__radio-elem + .order__radio-fake:after, .order__radio_checkbox .order__radio-elem .order__radio-fake-check:after {
+.order__radio_checkbox .order__radio-elem + .order__radio-fake:after {
   background: transparent;
 }
 
@@ -1396,6 +1448,18 @@ body {
     display: initial;
     margin-right: 1.5rem;
   }
+}
+
+.slider {
+  background: linear-gradient(to bottom, #f9b43b, #eb8c38 48%, #f9b43b);
+  background-size: cover;
+  position: relative;
+}
+.slider__container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  position: relative;
 }
 
 /*# sourceMappingURL=main.css.map */

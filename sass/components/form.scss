@@ -122,6 +122,14 @@
     height: rem(7px);
   }
 }
+
+.order__radio> .order__radio-elem:checked + .order__radio-fake-check{
+  &:after {
+    width: rem(11px);
+    height: rem(9px);
+  }
+}
+
 .order__radio_checkbox{
   .order__radio-fake{
     border-radius: rem(0px);
@@ -163,3 +171,5 @@
     margin: 0;
   }
 }
+
+

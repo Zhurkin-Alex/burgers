@@ -1,0 +1,14 @@
+.slider{
+  background: linear-gradient(to bottom, #f9b43b, #eb8c38 48%, #f9b43b);;
+  background-size: cover;
+  position: relative;
+
+  &__container{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    position: relative;
+  }
+
+
+}

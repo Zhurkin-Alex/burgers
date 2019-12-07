@@ -23,7 +23,7 @@ align-items: center;
   display: flex;
   align-items: center;
 }
-.header__navigation{
+.header__nav{
   @include tablets{
     display: none;
   }
@@ -66,10 +66,70 @@ align-items: center;
 .header__btn{
   margin-left: rem(15px);
   // @include tablets{
-  //   margin-left: 470px;
+  //   margin-left: rem(470px);
   // }
   // @include phones{
-  //   margin-left: 198px;
+  //   margin-left: rem(198px);
   // }
 
+}
+
+// .visible__page{
+//   height: 100%;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   position: relative;
+//   flex=1;
+
+// }
+// .visible__top{
+//   display: flex;
+ 
+// }
+.header_fullcreen{
+  .header__nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0, .9);
+    z-index: 45;}
+    .header__list{
+      flex-direction: column;
+
+      .header__item{
+        flex-direction: column;
+        margin-right: 0;
+        &::after{
+          margin:rem(26px) 0;
+        }
+      }
+      .header__link{
+        font-family: Ubuntu;
+        font-size: rem(24px);
+        font-weight: 400;
+        line-height: rem(40px);
+      }
+    }
+    .logo__img{
+      position: fixed;
+      top:rem(12px);
+      left:rem(19px);
+      z-index: 46;
+    }
+}
+
+.header__close{
+  position: absolute;
+  top:rem(31px);
+  right: rem(19px);
+  display:none;
+  @include tablets{
+    display: flex;
+  }
 }
