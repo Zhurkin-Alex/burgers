@@ -28,7 +28,7 @@ position: relative;
   padding-top: rem(12px);
   padding-bottom: rem(12px);
   @include phones {
-  width: 100%;
+  // width: 100%;
   padding-top: rem(18px);
   padding-bottom: rem(18px);
   }
