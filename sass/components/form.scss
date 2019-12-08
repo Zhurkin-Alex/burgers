@@ -146,7 +146,7 @@
 .order__radio-elem:checked{
 &+.order__radio-fake-check{
   &:after{
-    background: url(../img/bagground/galka.png) no-repeat transparent;
+    background:  url(../img/bagground/galka.png)  no-repeat transparent;
         background-size: contain;
         width: rem(14px);
         height: rem(14px);
