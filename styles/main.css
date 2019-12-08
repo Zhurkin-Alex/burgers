@@ -1049,7 +1049,7 @@ body {
 }
 
 .order__radio-elem:checked + .order__radio-fake-check:after {
-  background: url("../../img/bagground/galka.png") no-repeat transparent;
+  background: url(../img/bagground/galka.png) no-repeat transparent;
   background-size: contain;
   width: 0.875rem;
   height: 0.875rem;
