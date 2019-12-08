@@ -1143,6 +1143,12 @@ body {
   .team__content {
     margin: 0;
     text-align: center;
+    padding-left: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .team__content {
+    padding-left: 0;
   }
 }
 
@@ -1340,19 +1346,17 @@ body {
 
 .conteiner-footer {
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
 }
 @media screen and (max-width: 480px) {
   .conteiner-footer {
     flex-direction: column;
     text-align: center;
-    height: 7.25rem;
   }
 }
 
 .contacs {
-  width: 50%;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
 }
@@ -1394,11 +1398,9 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  width: 50%;
 }
 @media screen and (max-width: 480px) {
   .socials {
-    width: 100%;
     justify-content: center;
     padding-bottom: 1.125rem;
   }
@@ -1460,6 +1462,40 @@ body {
   flex-direction: row;
   height: 100%;
   position: relative;
+}
+.slider__scrol {
+  width: 6.5%;
+  height: 100%;
+}
+.slider__container {
+  width: 100%;
+  overflow: hidden;
+  height: 90%;
+}
+.slider__container__list {
+  display: flex;
+  height: 100%;
+  position: relative;
+  transition: left 1s;
+}
+.slider__container__menu {
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+.slider__img {
+  width: 1.8125rem;
+  height: 0.9375rem;
+  background-image: url(../img/icons/arrow-scroll.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  position: absolute;
+  transform: rotate(90deg);
+  top: 50%;
+}
+.slider__right-img {
+  transform: rotate(270deg);
 }
 
 /*# sourceMappingURL=main.css.map */
