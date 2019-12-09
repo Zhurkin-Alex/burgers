@@ -1,10 +1,20 @@
 .slaider{
-  background: linear-gradient(to bottom, #f9b43b, #eb8c38 48%, #f9b43b);
+  background-image: linear-gradient(to top, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, #f9b43b 100%);
   background-size: cover;
   &__container{
     height: 100%;
     display: flex;
   }
+}
+
+.slaider-first{
+  height: 100%;
+  display: flex;
+  
+@include tablets{
+    align-items: center;
+}
+  
 }
 .scroll{
   position: relative;
@@ -16,6 +26,7 @@
   position: relative;
   top: 50%;
   transform: rotate(90deg);
+  
 }
 .scroll__right{
   position: absolute;
@@ -34,16 +45,36 @@
 .slaider__menu{
   width: 100%;
   display: flex;
+  @include tablets{
+    display: flex;
+flex-direction: column;
+  }
+
 }
-.slaider__menu-left{
+.slaider__left{
   display: flex;
   align-items: center;
   position: relative;
   flex: 1;
+  @include tablets{
+    justify-content: center;
+  }
+}
+.slaider__img{
+  @include tablets{
+    display: flex;
+    justify-content: center;
+  }
+  @include phones {
+    width: 76%;
+  }
+ 
 }
 .ingridients{
-width: 90px;
-height: 90px;
+width: rem(90px)
+;
+height: rem(90px)
+;
 background-color: #f08c33;
 opacity: 0.4;
 border-radius: 5px;
@@ -60,6 +91,14 @@ align-items: center;
 &:hover {
   background-color:$red;
 }
+@include tablets{
+    top:0;
+    left: rem(17px);
+}
+@include phones {
+  top: -15.5%;
+    left: -4.6%;
+}
 }
 .ingridients__name{
 color: $white;
@@ -74,6 +113,15 @@ font-weight: 400;
   height: 4.6875rem;
   bottom: 25%;
   left: 0.9375rem;
+  @include tablets{
+    top:0;
+    left: 84%;
+    bottom: 0;
+  }
+  @include phones {
+    top: -15.5%;
+    left: 88%;
+  }
 }
 .kkal__amount{
   position: absolute;
@@ -91,7 +139,61 @@ font-size: 14px;
 font-weight: 400;;
 text-align: center;
 }
-.slaider__menu-right{
+.slaider__right{
   position: relative;
-  flex:1
+  flex:1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @include tablets{
+    text-align: center;
+    margin-top: 26px;
+  }
+}
+.slider__name-burger{
+color: $white;
+font-family: Gagalin;
+font-size: 72px;
+font-weight: 400;
+line-height: 63.93px;
+
+@include tablets{
+    padding: 0 88px;
+}
+@include phones {
+  font-size: 50px;
+  padding: 0 88px;
+}
+}
+.slider__about{
+color: $white;
+font-family: Ubuntu;
+font-size: 14px;
+font-weight: 300;
+line-height: 23.97px;
+margin-top: rem(50px);
+}
+.slide__prise{
+  margin-top: rem(36px);
+  display: flex;
+  @include tablets{
+    margin-top: 47px;
+  }
+}
+.slide__how-much{
+color: #e35028;
+font-family: Gagalin;
+font-size: 72px;
+font-weight: 400;
+line-height: 28.08px;
+letter-spacing: -1.79px;
+.slide__muni{
+  letter-spacing: -0.75px;
+  font-size: 30px;
+}
+}
+.slide__btn{
+  margin-top: rem(22px);
+  margin-left: rem(20px);
 }
