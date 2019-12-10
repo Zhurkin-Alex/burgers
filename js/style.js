@@ -9,3 +9,16 @@ var handrer = function(e) {
 humburger.addEventListener('click', handrer);
 
 close.addEventListener('click', handrer);
+
+
+// var humburger = document.querySelector('.burger__menu')
+// var close = document.querySelector('.header__close');
+
+// humburger.addEventListener('click', function(e){
+//   var header = document.querySelector('.header');
+//   header.classList.add('header_fullcreen');
+// });
+// close.addEventListener('click', function(e){
+//   var header = document.querySelector('.header');
+//   header.classList.remove('header_fullcreen');
+// });
