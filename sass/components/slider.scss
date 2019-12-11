@@ -76,13 +76,11 @@ flex-direction: column;
 }
 }
 .ingridients{
-width: rem(90px)
-;
-height: rem(90px)
-;
+width: rem(90px);
+height: rem(90px);
 background-color: #f08c33;
-opacity: 0.4;
 border-radius: 5px;
+cursor: pointer;
 
 position: absolute;
 top: 5.625rem;
@@ -102,7 +100,7 @@ align-items: center;
 }
 @include phones {
   top: -15.5%;
-    left: -4.6%;
+    left: -8%;
 }
 }
 .ingridients__name{
@@ -178,13 +176,21 @@ font-size: 14px;
 font-weight: 300;
 line-height: 23.97px;
 margin-top: rem(50px);
+@include phones {
+  margin-top: rem(36px);
+}
+ 
 }
 .slide__prise{
   margin-top: rem(36px);
   display: flex;
   @include tablets{
-    margin-top: 47px;
+    margin-top: rem(47px);
   }
+  @include phones {
+  }
+  margin-top: rem(26px);
+  
 }
 .slide__how-much{
 color: #e35028;

@@ -1540,8 +1540,8 @@ body {
   width: 5.625rem;
   height: 5.625rem;
   background-color: #f08c33;
-  opacity: 0.4;
   border-radius: 5px;
+  cursor: pointer;
   position: absolute;
   top: 5.625rem;
   left: 0.6875rem;
@@ -1562,7 +1562,7 @@ body {
 @media screen and (max-width: 480px) {
   .ingridients {
     top: -15.5%;
-    left: -4.6%;
+    left: -8%;
   }
 }
 
@@ -1636,7 +1636,7 @@ body {
 }
 @media screen and (max-width: 768px) {
   .slider__name-burger {
-    padding: 0 88px;
+    padding: 0 8%;
   }
 }
 @media screen and (max-width: 480px) {
@@ -1654,17 +1654,22 @@ body {
   line-height: 23.97px;
   margin-top: 3.125rem;
 }
+@media screen and (max-width: 480px) {
+  .slider__about {
+    margin-top: 2.25rem;
+  }
+}
 
 .slide__prise {
   margin-top: 2.25rem;
   display: flex;
+  margin-top: 1.625rem;
 }
 @media screen and (max-width: 768px) {
   .slide__prise {
-    margin-top: 47px;
+    margin-top: 2.9375rem;
   }
 }
-
 .slide__how-much {
   color: #e35028;
   font-family: Gagalin;
@@ -1681,6 +1686,68 @@ body {
 .slide__btn {
   margin-top: 1.375rem;
   margin-left: 1.25rem;
+}
+
+.composition {
+  position: absolute;
+  top: 0;
+  left: -55555588888px;
+  min-width: 270px;
+  background-color: #fff;
+  opacity: 0.9;
+  padding: 20px 20px;
+  border-radius: 3px;
+  z-index: 9;
+}
+@media screen and (max-width: 768px) {
+  .composition {
+    min-width: 321px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .composition {
+    min-width: 371px;
+  }
+}
+
+.ingridients:hover .composition {
+  position: absolute;
+  left: 102%;
+  transition: opacity 0.5s;
+}
+
+.composition__list {
+  width: 100%;
+}
+
+.composition__iteam {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.composition__picture {
+  max-width: 44px;
+  max-height: 39px;
+}
+
+.composition__text {
+  color: #2f3234;
+  font-family: Ubuntu;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.composition__weight {
+  color: #2f3234;
+  font-family: Ubuntu;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
 }
 
 /*# sourceMappingURL=main.css.map */

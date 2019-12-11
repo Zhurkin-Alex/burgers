@@ -1,0 +1,53 @@
+.composition{
+  position: absolute;
+  top: 0;
+  left:-55555588888px;
+  min-width: 270px;
+  background-color: $white;
+  opacity: 0.9;  
+  padding: 20px 20px;
+  border-radius: 3px;
+  z-index:9;
+  @include tablets{
+    min-width: 321px;
+  }
+  @include phones {
+    min-width: 371px;
+  }
+}
+.ingridients:hover {.composition{
+  // opacity: 1;
+  position: absolute;
+  left: 102%;
+  transition: opacity .5s;
+  // display: block;
+ }}
+.composition__list{
+  width: 100%;
+}
+.composition__iteam{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  margin-bottom: 15px;
+}
+.composition__picture{
+max-width:44px;
+max-height: 39px;
+}
+.composition__text{
+color: #2f3234;
+font-family: Ubuntu;
+font-size: 14px;
+font-weight: 500;
+line-height: 24px;
+}
+.composition__weight{
+color: #2f3234;
+font-family: Ubuntu;
+font-size: 14px;
+font-weight: 300;
+line-height: 24px;
+}
