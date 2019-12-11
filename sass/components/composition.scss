@@ -1,19 +1,19 @@
 .composition{
   position: absolute;
   top: 0;
-  left:-55555588888px;
-  min-width: 270px;
+  left:rem(-55555588888px);
+  min-width: rem(270px);
   background-color: $white;
   opacity: 0.9;  
-  padding: 20px 20px;
+  padding: rem(20px) rem(20px);
   border-radius: 3px;
   
   z-index:9;
   @include tablets{
-    min-width: 321px;
+    min-width: rem(321px);
   }
   @include phones {
-    min-width: 371px;
+    min-width: rem(371px);
   }
 }
 .ingridients:hover {.composition{
@@ -26,7 +26,7 @@
 .composition__list{
   width: 100%;
   @include tablets{
-    padding-right: 71px;
+    padding-right: rem(71px);
     
   }
 }
@@ -36,11 +36,11 @@
   align-items: center;
   justify-content: space-between;
   text-align: left;
-  margin-bottom: 15px;
+  margin-bottom: rem(15px);
 }
 .composition__picture{
-max-width:44px;
-max-height: 39px;
+max-width:rem(44px);
+max-height: rem(39px);
 }
 .composition__text{
 color: #2f3234;
@@ -59,10 +59,10 @@ line-height: 24px;
 .composition__close{
   display: none;
   position: absolute;
-  top: 19px;
-  right: 20px;
-  width: 20px;
-  height: 20px;
+  top: rem(19px);
+  right: rem(20px);
+  width: rem(20px);
+  height: rem(20px);
  
   opacity: 0.7;
   @include tablets{
