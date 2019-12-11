@@ -1719,6 +1719,11 @@ body {
 .composition__list {
   width: 100%;
 }
+@media screen and (max-width: 768px) {
+  .composition__list {
+    padding-right: 71px;
+  }
+}
 
 .composition__iteam {
   display: flex;
@@ -1748,6 +1753,21 @@ body {
   font-size: 14px;
   font-weight: 300;
   line-height: 24px;
+}
+
+.composition__close {
+  display: none;
+  position: absolute;
+  top: 19px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  opacity: 0.7;
+}
+@media screen and (max-width: 768px) {
+  .composition__close {
+    display: flex;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

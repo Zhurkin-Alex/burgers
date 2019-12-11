@@ -7,6 +7,7 @@
   opacity: 0.9;  
   padding: 20px 20px;
   border-radius: 3px;
+  
   z-index:9;
   @include tablets{
     min-width: 321px;
@@ -24,6 +25,10 @@
  }}
 .composition__list{
   width: 100%;
+  @include tablets{
+    padding-right: 71px;
+    
+  }
 }
 .composition__iteam{
   display: flex;
@@ -50,4 +55,17 @@ font-family: Ubuntu;
 font-size: 14px;
 font-weight: 300;
 line-height: 24px;
+}
+.composition__close{
+  display: none;
+  position: absolute;
+  top: 19px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+ 
+  opacity: 0.7;
+  @include tablets{
+  display: flex;
+  }
 }

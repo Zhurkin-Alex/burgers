@@ -22,3 +22,10 @@ close.addEventListener('click', handrer);
 //   var header = document.querySelector('.header');
 //   header.classList.remove('header_fullcreen');
 // });
+var composition = document.querySelector('.composition');
+var close = document.querySelector('.composition__close');
+close.addEventListener('click', function(e){
+ composition.style.display="none";
+ 
+
+});
