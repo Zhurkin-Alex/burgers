@@ -4,10 +4,25 @@
   &__container{
     height: 100%;
     display: flex;
+    align-items: center;
   }
 }
-
+.slaider__content{
+  height: 100%;
+}
+.slider__wrap{
+  height: 100%;
+  flex:1;
+  overflow: hidden;
+}
+.slaider__list{
+  display: flex;
+  height: 100%;
+}
 .slaider-first{
+  // растягиваем на всю ширину контейнера
+  flex:0 0 100%; 
+
   height: 100%;
   display: flex;
   
@@ -26,12 +41,16 @@
   position: relative;
   top: 50%;
   transform: rotate(90deg);
+  width: 1.8125rem;
+  height: 0.9375rem;
   
 }
 .scroll__right{
   position: absolute;
   top: 50%;
   transform: rotate(270deg);
+  width: 1.8125rem;
+  height: 0.9375rem;
 }
 .scroll-btn{
   width: rem(29px);
@@ -41,6 +60,7 @@
   background-size: contain;
   display: block;
   position: absolute;
+  right: 0;
 }
 .slaider__menu{
   width: 100%;
@@ -83,8 +103,8 @@ border-radius: 5px;
 cursor: pointer;
 
 position: absolute;
-top: 5.625rem;
-left: 0.6875rem;
+bottom: 67%;
+left: 1%;
 
 display: flex;
 justify-content: center;
@@ -100,7 +120,7 @@ align-items: center;
 }
 @include phones {
   top: -15.5%;
-    left: -8%;
+    left: 0;
 }
 }
 .ingridients__name{
@@ -114,8 +134,8 @@ font-weight: 400;
   position: absolute;
   width: 3.75rem;
   height: 4.6875rem;
-  bottom: 25%;
-  left: 0.9375rem;
+  top: 68%;
+  left: 1%;
   @include tablets{
     top:0;
     left: 84%;
@@ -123,7 +143,7 @@ font-weight: 400;
   }
   @include phones {
     top: -15.5%;
-    left: 88%;
+    
   }
 }
 .kkal__amount{

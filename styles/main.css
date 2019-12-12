@@ -1458,9 +1458,26 @@ body {
 .slaider__container {
   height: 100%;
   display: flex;
+  align-items: center;
+}
+
+.slaider__content {
+  height: 100%;
+}
+
+.slider__wrap {
+  height: 100%;
+  flex: 1;
+  overflow: hidden;
+}
+
+.slaider__list {
+  display: flex;
+  height: 100%;
 }
 
 .slaider-first {
+  flex: 0 0 100%;
   height: 100%;
   display: flex;
 }
@@ -1481,12 +1498,16 @@ body {
   position: relative;
   top: 50%;
   transform: rotate(90deg);
+  width: 1.8125rem;
+  height: 0.9375rem;
 }
 
 .scroll__right {
   position: absolute;
   top: 50%;
   transform: rotate(270deg);
+  width: 1.8125rem;
+  height: 0.9375rem;
 }
 
 .scroll-btn {
@@ -1497,6 +1518,7 @@ body {
   background-size: contain;
   display: block;
   position: absolute;
+  right: 0;
 }
 
 .slaider__menu {
@@ -1543,8 +1565,8 @@ body {
   border-radius: 5px;
   cursor: pointer;
   position: absolute;
-  top: 5.625rem;
-  left: 0.6875rem;
+  bottom: 67%;
+  left: 1%;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -1562,7 +1584,7 @@ body {
 @media screen and (max-width: 480px) {
   .ingridients {
     top: -15.5%;
-    left: -8%;
+    left: 0;
   }
 }
 
@@ -1577,8 +1599,8 @@ body {
   position: absolute;
   width: 3.75rem;
   height: 4.6875rem;
-  bottom: 25%;
-  left: 0.9375rem;
+  top: 68%;
+  left: 1%;
 }
 @media screen and (max-width: 768px) {
   .kkal {
@@ -1590,7 +1612,6 @@ body {
 @media screen and (max-width: 480px) {
   .kkal {
     top: -15.5%;
-    left: 88%;
   }
 }
 
