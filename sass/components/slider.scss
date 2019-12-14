@@ -29,7 +29,9 @@
 @include tablets{
     align-items: center;
 }
-  
+ .slaider__img{
+  max-width: 505px;
+ } 
 }
 .scroll{
   position: relative;
