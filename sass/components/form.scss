@@ -8,6 +8,9 @@
     text-align: center;
   }
 }
+.error{
+  color: red;
+}
 .form__elem{
   display: flex;
   @include tablets{

@@ -1,3 +1,5 @@
+
+// ------Главный экран открытие меню--------
 var humburger = document.querySelector('.burger__menu');
 var close = document.querySelector('.header__close');
 var header = document.querySelector('.header');
@@ -31,6 +33,9 @@ close.addEventListener('click', handrer);
 //  composition.style.display="none";
  // });
 
+
+
+  // --------Слайдер - бургеры-----------
  function Slider (selector, settings) {
    var slider = document.querySelector(selector);
    var list = slider.querySelector('ul');
@@ -99,7 +104,7 @@ if ( e.keyCode === 37){
 
 
 
-
+// ------меню, вертикальный слайдер, открытие и закрытие---------
 function Accordion (selector) {
 var acco = document.querySelector(selector);
 var items = acco.children;
@@ -124,3 +129,65 @@ acco.addEventListener('click', function (e){
 })
 }
 var aco = new Accordion ('#acco');
+
+
+// ----------------форма отправки-------------
+
+const myForm = document.querySelector('#myForm');
+const sendButton = document.querySelector('#sendButton')
+
+sendButton.addEventListener('click', function(event){
+  event.preventDefault();
+
+  // if (validateForm(myForm)) {
+  //   const data = {
+  //     name: myForm.elements.name.value,
+  //     phone: myForm.elements.phone.value,
+  //     comment: myForm.elements.comment.value
+
+  //   };
+  
+  const formData = new FormData();
+  formData.append('name',  myForm.elements.name.value);
+  formData.append('phone',  myForm.elements.phone.value);
+  formData.append('comment',  myForm.elements.comment.value);
+  formData.append('to',  'niherane-neponytno@mail.com');
+  
+  
+  if (validateForm(myForm)) {
+    // const xhr = new XMLHttpRequest();
+    // xhr.responseType = 'json';
+    // xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+    // // xhr.send(JSON.stringify(data));
+    // xhr.send(formData);
+    // xhr.addEventListener('load', () =>{
+     
+    // });
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST','https://webdev-api.loftschool.com/sendmail');
+    xhr.send(formData);
+   
+  }
+});
+
+ function validateForm(form) {
+ let valid = true;
+
+ if(!validateField(form.elements.name)){
+   valid = false;
+ }
+ if(!validateField(form.elements.phone)){
+   valid = false;
+ }
+ if(!validateField(form.elements.comment)){
+   valid = false;
+ }
+
+ return valid;
+ }
+
+
+ function validateField(field) {
+  field.nextElementSibling.textContent = field.validationMessage;
+  return field.checkValidity();
+ }

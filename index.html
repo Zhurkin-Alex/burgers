@@ -427,7 +427,7 @@
                             <div class="slaider__img">
                                 <img src="./img/burgers-slider/Chiken-burger.png" alt="бургер" class="slider__meny-burger1">
                             </div>
-                            <div class="ingridients">
+                            <div class="ingridients ingridients-chicken">
                               <svg class ="ingridients__img"
                               x="0px" y="0px"
                               width="45.748px" height="44.625px" viewBox="0 0 45.748 44.625" 
@@ -542,7 +542,7 @@
                       <div class="slaider__menu">
                         <div class="slaider__left">
                           <div class="slaider__img">
-                              <img src="./img/burgers-slider/NYC-Diner-Bacon-Cheeseburger.png" alt="бургер" class="slider__meny-burger1">
+                              <img src="./img/burgers-slider/NYC-Diner-Bacon-Cheeseburger.png" alt="бургер" class="slider__meny-burger1 slider-bacon">
                           </div>
                           <div class="ingridients">
                             <svg class ="ingridients__img"
@@ -661,7 +661,7 @@
                         <div class="slaider__img">
                             <img src="./img/burgers-slider/Spicy_Shrimp_Burger.png" alt="бургер" class="slider__meny-burger1">
                         </div>
-                        <div class="ingridients">
+                        <div class="ingridients ingridients-Shrimp">
                           <svg class ="ingridients__img"
                           x="0px" y="0px"
                           width="45.748px" height="44.625px" viewBox="0 0 45.748 44.625" 
@@ -733,7 +733,7 @@
                           </div>
                       
                         </div>
-                        <div class="kkal">
+                        <div class="kkal kkal-Shrimp">
                             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                             width="60px" height="60.178px" viewBox="0 0 60 60.178" enable-background="new 0 0 60 60.178" xml:space="preserve">
                             <use xlink:href="./img/sprite.svg#kkal"></use>
@@ -1058,40 +1058,47 @@
       <div class="container">
         <div class="title title--centered">Закажите доставку</div>
         <div class="order__form">
-          <form action="" class="form__elem">
+          <form action="" class="form__elem" id="myForm">
             <div class="order__form-col">
               <div class="order__form-row order__form-row_double">
                 <label class="order__form-block">
                   <div class="order__form-label">Имя</div>
-                  <input class="order__form-input" name="name" type="text" placeholder="">
+                  <input class="order__form-input" name="name" type="text" placeholder="name" required>
+                  <div class="error"></div>
                 </label>
                 <label class="order__form-block">
                   <div class="order__form-label">Телефон</div>
-                  <input class="order__form-input phone-mask" name="phone" type="text" placeholder="">
+                  <input class="order__form-input phone-mask" name="phone" type="text" placeholder="phone" required>
+                  <div class="error"></div>
                 </label>
               </div>
               <div class="order__form-row">
                 <label class="order__form-block">
                   <div class="order__form-label">Улица</div>
-                  <input class="order__form-input" name="street" type="text" placeholder="">
+                  <input class="order__form-input" name="street" type="text" placeholder="street" required>
+                  <div class="error"></div>
                 </label>
               </div>
               <div class="order__form-row order__form-row_quatro">
                 <label class="order__form-block">
                   <div class="order__form-label">Дом</div>
-                  <input class="order__form-input" name="home" type="text" placeholder="">
+                  <input class="order__form-input" name="home" type="text" placeholder="home" required>
+                  <div class="error"></div>
                 </label>
                 <label class="order__form-block">
                   <div class="order__form-label">Корпус</div>
-                  <input class="order__form-input" name="part" type="text" placeholder="">
+                  <input class="order__form-input" name="part" type="text" placeholder="part" required>
+                  <div class="error"></div>
                 </label>
                 <label class="order__form-block">
                   <div class="order__form-label">Квартира</div>
-                  <input class="order__form-input" name="appt" type="text" placeholder="">
+                  <input class="order__form-input" name="appt" type="text" placeholder="appt" required>
+                  <div class="error"></div>
                 </label>
                 <label class="order__form-block">
                   <div class="order__form-label">Этаж</div>
-                  <input class="order__form-input" name="floor" type="text" placeholder="">
+                  <input class="order__form-input" name="floor" type="text" placeholder="floor" >
+                  <div class="error"></div>
                 </label>
               </div>
             </div>
@@ -1099,25 +1106,26 @@
               <div class="order__form-row">
                 <label class="order__form-block">
                   <div class="order__form-label">Комментарий</div>
-                  <textarea class="order__form-input order__form-input_textarea" name="comment"></textarea>
+                  <textarea class="order__form-input order__form-input_textarea" name="comment" required></textarea>
+                  <div class="error"></div>
                 </label>
               </div>
               <div class="order__form-buttons">
                 <div class="order__form-row">
                   <label class="order__radio">
-                    <input class="order__radio-elem" name="payment" type="radio">
+                    <input class="order__radio-elem" name="payment" type="radio" >
                     <div class="order__radio-fake"></div>
                     <div class="order__form-label">Потребуется сдача</div>
                   </label>
                   <label class="order__radio">
-                    <input class="order__radio-elem" name="payment" type="radio">
+                    <input class="order__radio-elem" name="payment" type="radio" >
                     <div class="order__radio-fake"></div>
                     <div class="order__form-label">Оплата по карте</div>
                   </label>
                 </div>
                 <div class="order__form-row">
                   <label class="order__radio order__radio_checkbox">
-                    <input class="order__radio-elem" name="callback" type="checkbox" checked>
+                    <input class="order__radio-elem" name="callback" type="checkbox" checked >
                     <div class="order__radio-fake order__radio-fake-check"></div>
                     <div class="order__form-label">Не перезванивать</div>
                   </label>
@@ -1125,8 +1133,8 @@
                
                 
 
- <div class="order__form-row">
-                  <input class="btn order__form-button" name="" type="submit" value="Заказать">
+               <div class="order__form-row">
+                  <input class="btn order__form-button" name="" type="submit" value="Заказать" id="sendButton">
                   <input class="order__form-button order__form-button_reset" name="" type="reset" value="Очистить">
                 </div>
               </div>

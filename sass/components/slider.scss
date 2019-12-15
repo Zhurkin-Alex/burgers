@@ -97,6 +97,11 @@ flex-direction: column;
   height: 70%;
 }
 }
+.slider-bacon{
+  @include tablets{
+    width: 63%;
+  }
+}
 .ingridients{
 width: rem(90px);
 height: rem(90px);
@@ -132,6 +137,18 @@ font-size: 14px;
 font-weight: 400;
 
 }
+
+.ingridients-Shrimp, .kkal-Shrimp{
+  @include phones {
+    top: 0%;
+  }
+}
+.ingridients-chicken{
+  @include phones {
+    width: 73px;
+  }
+}
+
 .kkal{
   position: absolute;
   width: 3.75rem;
@@ -146,6 +163,12 @@ font-weight: 400;
   @include phones {
     top: -15.5%;
     
+  }
+  
+}
+.kkal-Shrimp{
+  @include phones {
+    top: 0%;
   }
 }
 .kkal__amount{
@@ -191,6 +214,7 @@ line-height: 63.93px;
   padding: 0 13%;
 }
 }
+
 .slider__about{
 color: $white;
 font-family: Ubuntu;
