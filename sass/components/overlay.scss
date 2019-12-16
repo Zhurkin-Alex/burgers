@@ -1,0 +1,9 @@
+.overlay__close{
+  position: absolute;
+  top:rem(31px);
+  right: rem(19px);
+  display:none;
+  @include tablets{
+    display: flex;
+  }
+}
