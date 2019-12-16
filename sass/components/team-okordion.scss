@@ -98,3 +98,25 @@
   font-size: rem(14px);
   line-height: rem(24px);
 }
+
+.accordeon__item-active{
+  .accordeon__info{
+    height: rem(110px); 
+
+    @include tablets{
+      height: rem(193px);
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      
+    }
+  @include phones {
+     
+  }
+  }
+  .accordeon__title{
+    color:$yellow;
+  }
+}

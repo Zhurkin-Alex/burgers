@@ -1229,6 +1229,23 @@ body {
   line-height: 1.5rem;
 }
 
+.accordeon__item-active .accordeon__info {
+  height: 6.875rem;
+}
+@media screen and (max-width: 768px) {
+  .accordeon__item-active .accordeon__info {
+    height: 12.0625rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.accordeon__item-active .accordeon__title {
+  color: #f9b43b;
+}
+
 .menu {
   display: flex;
   justify-content: flex-end;
@@ -1492,7 +1509,7 @@ body {
   }
 }
 .slaider-first .slaider__img {
-  max-width: 505px;
+  max-width: 90%;
 }
 
 .scroll {
@@ -1543,6 +1560,7 @@ body {
 .slaider__left {
   display: flex;
   align-items: center;
+  justify-content: center;
   position: relative;
   flex: 1;
 }
@@ -1739,6 +1757,10 @@ body {
 .slide__btn {
   margin-top: 1.375rem;
   margin-left: 1.25rem;
+}
+
+.ingridients-diner {
+  bottom: 70%;
 }
 
 .composition {

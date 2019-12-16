@@ -229,3 +229,32 @@ sendButton.addEventListener('click', function(event){
 //  composition.style.display="none";
  // });
 
+
+
+
+
+//  ----------горизонтальный аккардион team ---------
+function Accordion (selector) {
+  var acco = document.querySelector(selector);
+  var items = acco.children;
+  acco.addEventListener('click', function (e){
+    var target = e.target.closest('.accordeon__title');
+  
+    if(target) {
+     
+  
+     if (target.parentNode.classList.contains('accordeon__item-active')){
+      return target.parentNode.classList.remove('accordeon__item-active');
+     }
+    
+     for (let index = 0; index < items.length; index++)     {
+       const element = items[index];
+  
+       element.classList.remove('accordeon__item-active');
+  
+       target.parentNode.classList.add('accordeon__item-active');
+     }
+    }
+  })
+  }
+  var aco = new Accordion ('#acco-team');

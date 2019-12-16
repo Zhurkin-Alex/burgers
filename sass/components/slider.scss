@@ -30,7 +30,7 @@
     align-items: center;
 }
  .slaider__img{
-  max-width: 505px;
+  max-width: 90%;
  } 
 }
 .scroll{
@@ -76,6 +76,7 @@ flex-direction: column;
 .slaider__left{
   display: flex;
   align-items: center;
+  justify-content: center;
   position: relative;
   flex: 1;
   @include tablets{
@@ -253,4 +254,7 @@ letter-spacing: -1.79px;
 .slide__btn{
   margin-top: rem(22px);
   margin-left: rem(20px);
+}
+.ingridients-diner{
+  bottom: 70%;
 }
