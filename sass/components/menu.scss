@@ -21,6 +21,8 @@
   &__list, &__item{
       height: 100%;
       display: flex;
+
+    
   }
   &__list{
     position: absolute;
@@ -101,13 +103,15 @@
      
 .active{
   .menu__content-wrap{
+    transition: 1s;
+    transition-timing-function: cubic-bezier(0.24, 0.45, 1, 1);
   width: rem(540px); 
   @include tablets{
-      width:rem(550px);
+    width: 36.2rem;
       
     }
   @include phones {
-      width: rem(272px);
+    width: 18rem;
   }
     }
   .menu__trigger-text{

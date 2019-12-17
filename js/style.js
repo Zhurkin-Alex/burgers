@@ -104,31 +104,7 @@ if ( e.keyCode === 37){
 
 
 
-// ------меню, вертикальный слайдер, открытие и закрытие---------
-function Accordion (selector) {
-var acco = document.querySelector(selector);
-var items = acco.children;
-acco.addEventListener('click', function (e){
-  var target = e.target.closest('.menu__trigger');
 
-  if(target) {
-   e.preventDefault();
-
-   if (target.parentNode.classList.contains('active')){
-    return target.parentNode.classList.remove('active');
-   }
-  
-   for (let index = 0; index < items.length; index++)     {
-     const element = items[index];
-
-     element.classList.remove('active');
-
-     target.parentNode.classList.add('active');
-   }
-  }
-})
-}
-var aco = new Accordion ('#acco');
 
 
 // ----------------форма отправки-------------
@@ -231,30 +207,30 @@ sendButton.addEventListener('click', function(event){
 
 
 
-
-
-//  ----------горизонтальный аккардион team ---------
+// ------меню, вертикальный слайдер, открытие и закрытие---------
 function Accordion (selector) {
   var acco = document.querySelector(selector);
   var items = acco.children;
   acco.addEventListener('click', function (e){
-    var target = e.target.closest('.accordeon__title');
+    var target = e.target.closest('.trigger');
   
     if(target) {
-     
+     e.preventDefault();
   
-     if (target.parentNode.classList.contains('accordeon__item-active')){
-      return target.parentNode.classList.remove('accordeon__item-active');
+     if (target.parentNode.classList.contains('active')){
+      return target.parentNode.classList.remove('active');
      }
     
      for (let index = 0; index < items.length; index++)     {
        const element = items[index];
   
-       element.classList.remove('accordeon__item-active');
+       element.classList.remove('active');
   
-       target.parentNode.classList.add('accordeon__item-active');
+       target.parentNode.classList.add('active');
      }
     }
   })
   }
-  var aco = new Accordion ('#acco-team');
+  var aco = new Accordion ('#acco');
+//  ----------горизонтальный аккардион team ---------
+ var acoteam = new Accordion ('#acco-team');

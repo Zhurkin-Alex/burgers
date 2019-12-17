@@ -21,6 +21,7 @@
     flex-basis: 50%;
     height: 25%;
   }
+  
 }
 // задаем высоту и ширину для фото, чтоб растянулось на весь контейнер
 .revievs__img{
@@ -80,6 +81,7 @@ line-height: 1;
   line-height: rem(24px);
   @include tablets{
    padding-top: rem(20px);
+   font-size: rem(14px);
   }
   
 @include phones {
