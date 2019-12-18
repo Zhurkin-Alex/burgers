@@ -1,6 +1,10 @@
 .location{
-  background: url(../img/bagground/map.png) center center/ cover no-repeat;
+//   background: url(../img/bagground/map.png) center center/ cover no-repeat;
 position: relative;
+}
+.location__map{
+  height: 100%;
+  width: 100%;
 }
 .footer{
   position: absolute;

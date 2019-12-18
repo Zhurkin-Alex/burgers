@@ -234,3 +234,68 @@ function Accordion (selector) {
   var aco = new Accordion ('#acco');
 //  ----------горизонтальный аккардион team ---------
  var acoteam = new Accordion ('#acco-team');
+
+
+
+
+//  -------карта-------
+
+
+
+var marks=[
+  [59.95392884288849, 30.306516487550038],
+  [59.94553565102462, 30.294020394385132],
+  [59.93205652126081, 30.360318918179757],
+  [59.944210874795665, 30.35880354786377],
+  [59.936169580924854, 30.32199819798399]
+
+]
+
+ymaps.ready(init);
+function init(){
+// Создание карты.
+var myMap = new ymaps.Map("map", {
+  // Координаты центра карты.
+  // Порядок по умолчанию: «широта, долгота».
+  // Чтобы не определять координаты центра карты вручную,
+  // воспользуйтесь инструментом Определение координат.
+  center: [59.94435203, 30.32271703],
+  // Уровень масштабирования. Допустимые значения:
+  // от 0 (весь мир) до 19.
+  zoom: 13
+});
+
+var clusterer = new ymaps.Clusterer();
+myMap.geoObjects.add(clusterer);
+
+  //   myMap.events.add('click', function (e) {
+  //     // Получение координат щелчка
+  //     var coords = e.get('coords');
+  //     console.log(coords)
+  //     // alert(coords.join(', '));
+  //     createPlacemark(coords)
+  // });
+
+  function createPlacemark(coords){
+  var myPlacemark = new ymaps.Placemark(coords, {
+    hintContent: 'Собственный значок метки',
+    balloonContent: coords
+}, {
+    // Опции.
+    // Необходимо указать данный тип макета.
+    iconLayout: 'default#image',
+    // Своё изображение иконки метки.
+    iconImageHref: 'img/icons/map-marker.svg',
+    // Размеры метки.
+    iconImageSize: [30, 42],
+    // Смещение левого верхнего угла иконки относительно
+    // её "ножки" (точки привязки).
+    iconImageOffset: [-5, -38]
+});
+  clusterer.add(myPlacemark);
+  }
+
+  marks.forEach(function(coords){
+    createPlacemark(coords)
+  })
+}
