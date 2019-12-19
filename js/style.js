@@ -141,6 +141,7 @@ sendButton.addEventListener('click', function(event){
     // });
     const xhr = new XMLHttpRequest();
     xhr.open('POST','https://webdev-api.loftschool.com/sendmail');
+    xhr.responseType = 'json';
     xhr.send(formData);
    
   }
@@ -170,40 +171,78 @@ sendButton.addEventListener('click', function(event){
 
 
 
+//  ------номер телефона------------
+var selector = document.getElementById("mask");
 
-//  ---------------оверлей------------------
-// var revievs__btn = document.querySelector('.revievs__btn');
-// var close = document.querySelector('.overlay__close');
-// var header = document.querySelector('.revievs__hover');
-// var handrer = function(e) {
-//   header.classList.toggle('header_fullcreen');
-// };
+var im = new Inputmask("+7(999)-9-999-999");
+im.mask(selector);
 
 
-// revievs__btn.addEventListener('click', handrer);
 
-// close.addEventListener('click', handrer);
+//  ---------------оверлей revievs------------------
+
+const openButton = document.querySelector("#openOverlay");
+const overlayElement = document.querySelector(".revievs__overlay");
+
+openButton.addEventListener("click", function() {
+  overlayElement.style.display = "flex";
+});
+
+const closeElement = overlayElement.querySelector(".revievs__close");
+closeElement.addEventListener("click", function(e) {
+  e.preventDefault();
+  overlayElement.style.display = "none";
+});
+
+overlayElement.addEventListener("click", function(e) {
+  if (e.target === overlayElement) {
+    closeElement.click();
+  }
+});
 
 
-// var humburger = document.querySelector('.burger__menu')
-// var close = document.querySelector('.header__close');
+// const openButton = document.querySelector("#openOverlay");
+// const successOverlay = createOverlay("Привет, <b>loftschool</b>!");
 
-// humburger.addEventListener('click', function(e){
-//   var header = document.querySelector('.header');
-//   header.classList.add('header_fullcreen');
+// openButton.addEventListener("click", function() {
+//   document.body.appendChild(successOverlay);
 // });
-// close.addEventListener('click', function(e){
-//   var header = document.querySelector('.header');
-//   header.classList.remove('header_fullcreen');
-// });
+
+// function createOverlay(content) {
+//   const overlayElement = document.createElement("div");
+//   overlayElement.classList.add("overlay");
+//   overlayElement.addEventListener("click", function(e) {
+//     if (e.target === overlayElement) {
+//       closeElement.click();
+//     }
+//   });
+
+//   const containerElement = document.createElement("div");
+//   containerElement.classList.add("revievs__container");
+
+//   const contentElement = document.createElement("div");
+//   contentElement.classList.add("revievs__content");
+//   contentElement.innerHTML = content;
+
+//   const closeElement = document.createElement("a");
+//   closeElement.classList.add("revievs__close");
+//   closeElement.textContent = "x";
+//   closeElement.href = "#";
+//   closeElement.addEventListener("click", function(e) {
+//     e.preventDefault();
+//     document.body.removeChild(overlayElement);
+//   });
+
+//   overlayElement.appendChild(containerElement);
+//   containerElement.appendChild(closeElement);
+//   containerElement.appendChild(contentElement);
+
+//   return overlayElement;
+// }
 
 
-// Крестик для слайдера
-// var composition = document.querySelector('.composition');
-// var close = document.querySelector('.composition__close');
-// close.addEventListener('click', function(e){
-//  composition.style.display="none";
- // });
+
+
 
 
 
@@ -238,7 +277,11 @@ function Accordion (selector) {
 
 
 
-//  -------карта-------
+
+
+
+
+ //  -------карта-------
 
 
 
@@ -262,7 +305,9 @@ var myMap = new ymaps.Map("map", {
   center: [59.94435203, 30.32271703],
   // Уровень масштабирования. Допустимые значения:
   // от 0 (весь мир) до 19.
-  zoom: 13
+  zoom: 13,
+  controls: []
+
 });
 
 var clusterer = new ymaps.Clusterer();

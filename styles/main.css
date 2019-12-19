@@ -861,14 +861,13 @@ body {
   padding-top: 1.875rem;
   color: #fff;
   font-family: Ubuntu;
-  font-size: 0.875rem;
+  font-size: 1vmax;
   font-weight: 300;
   line-height: 1.5rem;
 }
 @media screen and (max-width: 768px) {
   .revievs__text {
     padding-top: 1rem;
-    font-size: 0.875rem;
     line-height: 1rem;
   }
 }
@@ -1870,6 +1869,60 @@ body {
   .overlay__close {
     display: flex;
   }
+}
+
+.revievs__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #0005;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.revievs__container {
+  position: relative;
+}
+
+.revievs__content {
+  width: 400px;
+  background: #fff;
+  border-radius: 5px;
+  padding: 30px 25px;
+  color: #2f3234;
+  margin: 0;
+}
+
+.revievs__close {
+  font: 20px Helvetica, sans-serif;
+  color: #e35028;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  text-decoration: none;
+}
+
+.revievs__about {
+  color: #2f3234;
+  font-family: Gagalin;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.revievs__slide {
+  padding-top: 1.875rem;
+  color: #2f3234;
+  font-family: Ubuntu;
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.5rem;
 }
 
 /*# sourceMappingURL=main.css.map */

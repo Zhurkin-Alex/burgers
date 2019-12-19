@@ -913,8 +913,8 @@
                
               </div>
               <div class="revievs__batton">
-                <button class="btn revievs__btn revievs__tablets" type="button">Подробнее</button>
-                <button class="btn revievs__btn revievs__btn-phones " type="button">Читать отзыв</button>              
+                <button class="btn revievs__btn revievs__tablets " id="openOverlay" type="button">Подробнее</button>
+                <button class="btn revievs__btn revievs__btn-phones " id="openOverlay1" type="button">Читать отзыв</button>              
               </div>
             </div>
             <!-- <div class="overlay">
@@ -940,8 +940,8 @@
                 </p>                
               </div>
               <div class="revievs__batton">
-                <button class="btn revievs__btn revievs__tablets" type="button">Подробнее</button>
-                <button class="btn revievs__btn revievs__btn-phones " type="button">Читать отзыв</button>
+                <button class="btn revievs__btn revievs__tablets" id="openOverlay" type="button">Подробнее</button>
+                <button class="btn revievs__btn revievs__btn-phones " id="openOverlay" type="button">Читать отзыв</button>
               </div>
               
             </div>
@@ -960,8 +960,8 @@
                 </p>                
               </div>
               <div class="revievs__batton">
-                <button class="btn revievs__btn revievs__tablets" type="button">Подробнее</button>
-                <button class="btn revievs__btn revievs__btn-phones " type="button">Читать отзыв</button>
+                <button class="btn revievs__btn revievs__tablets" id="openOverlay" type="button">Подробнее</button>
+                <button class="btn revievs__btn revievs__btn-phones " id="openOverlay" type="button">Читать отзыв</button>
               </div>
             </div>
           </li>
@@ -979,8 +979,8 @@
                 </p>                
               </div>
               <div class="revievs__batton">
-                <button class="btn revievs__btn revievs__tablets" type="button">Подробнее</button>
-                <button class="btn revievs__btn revievs__btn-phones " type="button">Читать отзыв</button>
+                <button class="btn revievs__btn revievs__tablets" id="openOverlay" type="button">Подробнее</button>
+                <button class="btn revievs__btn revievs__btn-phones " id="openOverlay" type="button">Читать отзыв</button>
               </div>
             </div>
           </li>
@@ -998,8 +998,8 @@
                 </p>               
               </div>
               <div class="revievs__batton">
-                <button class="btn revievs__btn revievs__tablets" type="button">Подробнее</button>
-                <button class="btn revievs__btn revievs__btn-phones " type="button">Читать отзыв</button>
+                <button class="btn revievs__btn revievs__tablets" id="openOverlay" type="button">Подробнее</button>
+                <button class="btn revievs__btn revievs__btn-phones " id="openOverlay" type="button">Читать отзыв</button>
               </div>
             </div>
           </li>
@@ -1017,8 +1017,8 @@
                 </p>                
               </div>
               <div class="revievs__batton">
-                <button class="btn revievs__btn revievs__tablets" type="button">Подробнее</button>
-                <button class="btn revievs__btn revievs__btn-phones " type="button">Читать отзыв</button>
+                <button class="btn revievs__btn revievs__tablets" id="openOverlay" type="button">Подробнее</button>
+                <button class="btn revievs__btn revievs__btn-phones " id="openOverlay" type="button">Читать отзыв</button>
               </div>
             </div>
           </li>
@@ -1036,8 +1036,8 @@
                 </p>                
               </div>
               <div class="revievs__batton">
-                <button class="btn revievs__btn revievs__tablets" type="button">Подробнее</button>
-                <button class="btn revievs__btn revievs__btn-phones " type="button">Читать отзыв</button>
+                <button class="btn revievs__btn revievs__tablets" id="openOverlay" type="button">Подробнее</button>
+                <button class="btn revievs__btn revievs__btn-phones " id="openOverlay" type="button">Читать отзыв</button>
               </div>
             </div>
           </li>
@@ -1055,8 +1055,8 @@
                 </p>                
               </div>
               <div class="revievs__batton">
-                <button class="btn revievs__btn revievs__tablets" type="button">Подробнее</button>
-                <button class="btn revievs__btn revievs__btn-phones " type="button">Читать отзыв</button>
+                <button class="btn revievs__btn revievs__tablets" id="openOverlay" type="button">Подробнее</button>
+                <button class="btn revievs__btn revievs__btn-phones " id="openOverlay" type="button">Читать отзыв</button>
               </div>
             </div>
           </li>
@@ -1078,7 +1078,7 @@
                 </label>
                 <label class="order__form-block">
                   <div class="order__form-label">Телефон</div>
-                  <input class="order__form-input phone-mask" name="phone" type="text" placeholder="phone" required>
+                  <input class="order__form-input phone-mask" name="phone" id="mask" type="text" placeholder="phone" required>
                   <div class="error"></div>
                 </label>
               </div>
@@ -1245,9 +1245,24 @@
           </li>
         </ul>
 
-       
+<div style="display:none" class="revievs__overlay">
+  <div class="revievs__container">
+    <a class="revievs__close" href="#">x</a>
+    <div class="revievs__content">
+     <div class="revievs__about">Константин Спилберг</div> 
+     <div class="revievs__slide">
+      Мысли все о них и о них, о них и о них.
+      Нельзя устоять, невозможно забыть... Никогда не думал, 
+      что булочки могут быть такими мягкими, котлетка такой сочной,
+      а сыр таким расплавленным. Мысли все о них и о них, о них и о них. 
+      Нельзя устоять, невозможно забыть... Никогда не думал, что булочки 
+      могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
+      
+    </div>
   </div>
-
+</div> 
+  </div>
+ <script src="./js/im.js"></script>
 <script src='./js/style.js'></script>
   </body>
 </html>
