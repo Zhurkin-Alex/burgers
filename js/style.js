@@ -314,8 +314,8 @@ const sections = $(".section");
 const display = $(".maincontent");
 let inScroll = false;
 
-// const md = new MobileDetect(window.navigator.userAgent);
-// const isMobile = md.mobile();
+const md = new MobileDetect(window.navigator.userAgent);
+const isMobile = md.mobile();
 
 const performTransition = sectionEq =>{
 if (inScroll === false){
@@ -398,7 +398,7 @@ $('[data-scroll-to]').on("click", e => {
 
 });
 
-// if(isMobile){
+if(isMobile){
   $("body").swipe({
     swipe:function(
       event, 
@@ -412,5 +412,5 @@ $('[data-scroll-to]').on("click", e => {
     scrollToSection(scrollDirection);
     }
   });
-// }
+}
 
