@@ -201,47 +201,6 @@ overlayElement.addEventListener("click", function(e) {
 });
 
 
-// const openButton = document.querySelector("#openOverlay");
-// const successOverlay = createOverlay("Привет, <b>loftschool</b>!");
-
-// openButton.addEventListener("click", function() {
-//   document.body.appendChild(successOverlay);
-// });
-
-// function createOverlay(content) {
-//   const overlayElement = document.createElement("div");
-//   overlayElement.classList.add("overlay");
-//   overlayElement.addEventListener("click", function(e) {
-//     if (e.target === overlayElement) {
-//       closeElement.click();
-//     }
-//   });
-
-//   const containerElement = document.createElement("div");
-//   containerElement.classList.add("revievs__container");
-
-//   const contentElement = document.createElement("div");
-//   contentElement.classList.add("revievs__content");
-//   contentElement.innerHTML = content;
-
-//   const closeElement = document.createElement("a");
-//   closeElement.classList.add("revievs__close");
-//   closeElement.textContent = "x";
-//   closeElement.href = "#";
-//   closeElement.addEventListener("click", function(e) {
-//     e.preventDefault();
-//     document.body.removeChild(overlayElement);
-//   });
-
-//   overlayElement.appendChild(containerElement);
-//   containerElement.appendChild(closeElement);
-//   containerElement.appendChild(contentElement);
-
-//   return overlayElement;
-// }
-
-
-
 
 
 
@@ -355,6 +314,9 @@ const sections = $(".section");
 const display = $(".maincontent");
 let inScroll = false;
 
+// const md = new MobileDetect(window.navigator.userAgent);
+// const isMobile = md.mobile();
+
 const performTransition = sectionEq =>{
 if (inScroll === false){
   inScroll = true;
@@ -373,11 +335,11 @@ if (inScroll === false){
     setTimeout(() => {
     inScroll = false;
 
-    $(".fixed-menu__item")
+    $(".fixed-menu__dot")
     .eq(sectionEq)
-    .addClass("active-sections")
+    .addClass("fixed-menu__dot--active")
     .siblings()
-    .removeClass("active-sections");
+    .removeClass("fixed-menu__dot--active");
     }, 1300);
 }
 };
@@ -427,7 +389,28 @@ if(tagName !== "input" && tagName !== "textarea"){
 }
 });
 
+$('[data-scroll-to]').on("click", e => {
+  e.preventDefault();
+  const $this = $(e.currentTarget);
+  const target = $this.attr("data-scroll-to");
+  
+  performTransition (target);
 
+});
 
-
+// if(isMobile){
+  $("body").swipe({
+    swipe:function(
+      event, 
+      direction, 
+      distance, 
+      duration, 
+      fingerCount, 
+      fingerData) 
+      {
+      const scrollDirection = direction = direction === "up" ? "next" : "prev";  
+    scrollToSection(scrollDirection);
+    }
+  });
+// }
 

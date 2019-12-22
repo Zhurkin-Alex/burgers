@@ -79,6 +79,7 @@
   background-size: contain;
   display: block;
   position: absolute;
+  z-index: 9;
   bottom: rem(41px);
   left: 50%;
   transform: translateX(-50%);
