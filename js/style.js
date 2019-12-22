@@ -314,8 +314,8 @@ const sections = $(".section");
 const display = $(".maincontent");
 let inScroll = false;
 
-const md = new MobileDetect(window.navigator.userAgent);
-const isMobile = md.mobile();
+// const md = new MobileDetect(window.navigator.userAgent);
+// const isMobile = md.mobile();
 
 const performTransition = sectionEq =>{
 if (inScroll === false){
@@ -398,19 +398,23 @@ $('[data-scroll-to]').on("click", e => {
 
 });
 
-if(isMobile){
-  $("body").swipe({
-    swipe:function(
-      event, 
-      direction, 
-      distance, 
-      duration, 
-      fingerCount, 
-      fingerData) 
-      {
-      const scrollDirection = direction = direction === "up" ? "next" : "prev";  
-    scrollToSection(scrollDirection);
-    }
-  });
-}
+// if(isMobile){
+  
+// }
+
+$("body").swipe({
+  swipe: function(
+    event, 
+    direction, 
+    distance, 
+    duration, 
+    fingerCount, 
+    fingerData) 
+    {
+    const scrollDirection = direction === "up" ? "next" : "prev";  
+  scrollToSection(scrollDirection);
+  }
+});
+
+
 
