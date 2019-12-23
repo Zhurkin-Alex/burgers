@@ -398,42 +398,24 @@ $('[data-scroll-to]').on("click", e => {
 
 });
 
-// if(isMobile){
-  
-// }
-
-// $("body").swipe({
-//   swipe: function(
-//     event, 
-//     direction, 
-//     distance, 
-//     duration, 
-//     fingerCount, 
-//     fingerData) 
-//     {
-//     const scrollDirection = direction === "up" ? "next" : "prev";  
-//   scrollToSection(scrollDirection);
-//   }
-// });
-
-if (isMobile) {
-  window.addEventListener(
-    "touchmove",
-    e => {
-      e.preventDefault();
-    },
-    { passive: false }
-  );
-
+if(isMobile){
   $("body").swipe({
-    swipe: (event, direction) => {
-      let scrollDirecrion;
-      if (direction === "up") scrollDirecrion = "next";
-      if (direction === "down") scrollDirecrion = "prev";
-      scrollViewport(scrollDirecrion);
+    swipe: function(
+      event, 
+      direction, 
+      distance, 
+      duration, 
+      fingerCount, 
+      fingerData) 
+      {
+      const scrollDirections = direction === "up" ? "next" : "prev";  
+    scrollToSection(scrollDirections);
     }
   });
+  
 }
+
+
 
 
 
