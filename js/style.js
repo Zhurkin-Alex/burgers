@@ -181,29 +181,59 @@ im.mask(selector);
 
 //  ---------------оверлей revievs------------------
 
-const openButton = document.querySelector("#openOverlay");
-const overlayElement = document.querySelector(".revievs__overlay");
+// const openButton = document.querySelector("#openOverlay");
+// const overlayElement = document.querySelector(".revievs__overlay");
 
-openButton.addEventListener("click", function() {
-  overlayElement.style.display = "flex";
-});
+// openButton.addEventListener("click", function() {
+//   overlayElement.style.display = "flex";
+// });
 
-const closeElement = overlayElement.querySelector(".revievs__close");
-closeElement.addEventListener("click", function(e) {
-  e.preventDefault();
-  overlayElement.style.display = "none";
-});
+// const closeElement = overlayElement.querySelector(".revievs__close");
+// closeElement.addEventListener("click", function(e) {
+//   e.preventDefault();
+//   overlayElement.style.display = "none";
+// });
 
-overlayElement.addEventListener("click", function(e) {
-  if (e.target === overlayElement) {
-    closeElement.click();
-  }
-});
-
-
+// overlayElement.addEventListener("click", function(e) {
+//   if (e.target === overlayElement) {
+//     closeElement.click();
+//   }
+// });
 
 
+// -------popap-------
+function commentsPopup () {
+  const openPopup = document.querySelectorAll('.js-feedback-modal');
+  const popup = document.querySelector('.overlay');
+  const closePopup = popup.querySelector('.js-close');
+  const popupTitle = popup.querySelector('.overlay__title');
+  const popupText = popup.querySelector('.overlay__text');
+  
 
+  for (let i=0; i < openPopup.length; i++) {
+    openPopup[i].addEventListener('click', function() {
+      
+        popup.style.display = 'inline-block'
+        let thisParent = this.parentNode;
+        let name = thisParent.querySelector('.revievs__name').innerText;
+        let content = thisParent.querySelector('.revievs__text p').innerText;
+
+        popupTitle.innerText = name;
+        popupText.innerText = content;
+    })
+}
+closePopup.addEventListener('click', function(e) {
+    
+  event.preventDefault();
+  popup.style.display = 'none';
+})
+popup.addEventListener('click', function(e) {
+if(e.target.classList.contains('popup')) {
+    closePopup.click();
+}
+})
+}
+commentsPopup();
 
 // ------меню, вертикальный слайдер, открытие и закрытие---------
 function Accordion (selector) {
@@ -334,14 +364,15 @@ if (inScroll === false){
 
     setTimeout(() => {
     inScroll = false;
-
-    $(".fixed-menu__dot")
+    
+    $(".fixed-menu__item ")
     .eq(sectionEq)
-    .addClass("fixed-menu__dot--active")
+    .addClass("active__fixed")
     .siblings()
-    .removeClass("fixed-menu__dot--active");
+    .removeClass("active__fixed");
     }, 1300);
 }
+
 };
 
 const scrollToSection = direction => {
@@ -413,9 +444,34 @@ if(isMobile){
     }
   });
   
+};
+
+
+
+// ------video------
+
+
+
+let player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('yt-player', {
+    height: '360',
+    width: '640',
+    videoId: 'M7lc1UVf-VE',
+    events: {
+      // 'onReady': onPlayerReady,
+      // 'onStateChange': onPlayerStateChange
+    },
+    playerVars: {
+      controls: 0,
+      disablekb: 0,
+      showinfo: 0,
+      rel: 0,
+      autoplay: 0,
+      modestbranding: 0
+    }
+  });
 }
-
-
-
-
-
+$('.player__start').on("click", e => {
+  player.playVideo();
+})

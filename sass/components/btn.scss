@@ -12,3 +12,34 @@
   background-color:#c1401e;
   }
 }
+
+.popup__close {
+  position: relative;
+  right: 2rem;
+  top: 1rem;
+  width: 1rem;
+  height: 1rem;
+  opacity: 0.8;
+  cursor: pointer;
+  }
+
+.popup__close:before, .popup__close:after {
+  position: absolute;
+  left: 0.9375rem;
+  content: ' ';
+  height: 17px;
+  width: 2px;
+  border-radius: 3px;
+  background-color: $red;
+  }
+
+.popup__close:before {
+  transform: rotate(45deg);
+}
+.popup__close:after {
+  transform: rotate(-45deg);
+}
+  
+.popup__close:hover {
+  opacity: 1;
+}
