@@ -1,54 +1,54 @@
-.revievs__overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #0005;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 10000;
-}
+// .revievs__overlay {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   background: #0005;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   z-index: 10000;
+// }
 
-.revievs__container {
-  position: relative;
-}
+// .revievs__container {
+//   position: relative;
+// }
 
-.revievs__content {
-  width: 400px;
-  background: $white;
-  border-radius: 5px;
-  padding: 30px 25px;
-  color: $black;
-  margin: 0;
-}
+// .revievs__content {
+//   width: 400px;
+//   background: $white;
+//   border-radius: 5px;
+//   padding: 30px 25px;
+//   color: $black;
+//   margin: 0;
+// }
 
-.revievs__close {
-  font: 20px Helvetica, sans-serif;
-  color: $red;
-  position: absolute;
-  right: 10px;
-  top: 10px;
+// .revievs__close {
+//   font: 20px Helvetica, sans-serif;
+//   color: $red;
+//   position: absolute;
+//   right: 10px;
+//   top: 10px;
  
   
-  width: 20px;
-  height: 20px;
+//   width: 20px;
+//   height: 20px;
  
-  text-decoration: none;
-}
-.revievs__about{
-  color: $black;
-  font-family: Gagalin;
-  font-size: rem(14px);
-  font-weight: 400;
-  line-height: 1;
-}
-.revievs__slide{
-  padding-top:  rem(30px);
-  color: $black;
-  font-family: Ubuntu;
-  font-size: rem(14px);
-  font-weight: 300;
-  line-height: rem(24px);
-}
+//   text-decoration: none;
+// }
+// .revievs__about{
+//   color: $black;
+//   font-family: Gagalin;
+//   font-size: rem(14px);
+//   font-weight: 400;
+//   line-height: 1;
+// }
+// .revievs__slide{
+//   padding-top:  rem(30px);
+//   color: $black;
+//   font-family: Ubuntu;
+//   font-size: rem(14px);
+//   font-weight: 300;
+//   line-height: rem(24px);
+// }

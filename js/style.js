@@ -202,39 +202,39 @@ im.mask(selector);
 
 
 // -------popap-------
-// function commentsPopup () {
-//   const openPopup = document.querySelectorAll('.js-feedback-modal');
-//   const popup = document.querySelector('.overlay');
-//   const closePopup = popup.querySelector('.js-close');
-//   const popupTitle = popup.querySelector('.overlay__title');
-//   const popupText = popup.querySelector('.overlay__text');
+function commentsPopup () {
+  const openPopup = document.querySelectorAll('.js-feedback-modal');
+  const popup = document.querySelector('.overlay');
+  const closePopup = popup.querySelector('.js-close');
+  const popupTitle = popup.querySelector('.overlay__title');
+  const popupText = popup.querySelector('.overlay__text');
   
 
-//   for (let i=0; i < openPopup.length; i++) {
-//     openPopup[i].addEventListener('click', function() {
+  for (let i=0; i < openPopup.length; i++) {
+    openPopup[i].addEventListener('click', function() {
       
-//         popup.style.display = 'inline-block';
-//         let thisParent = this.parentNode;
-//         let name = thisParent.querySelector('.revievs__name').innerText;
-//         let content = thisParent.querySelector('.revievs__text p').innerText;
+        popup.style.display = 'inline-block';
+        let thisParent = this.parentNode;
+        let name = thisParent.querySelector('.revievs__name').innerText;
+        let content = thisParent.querySelector('.revievs__text p').innerText;
         
-//         popupTitle.innerText = name;
-//         popupText.innerText = content;
-//     })
-//     console.log(thisParent);
-// }
-// closePopup.addEventListener('click', function(e) {
+        popupTitle.innerText = name;
+        popupText.innerText = content;
+    })
     
-//   event.preventDefault();
-//   popup.style.display = 'none';
-// })
-// popup.addEventListener('click', function(e) {
-// if(e.target.classList.contains('popup')) {
-//     closePopup.click();
-// }
-// })
-// }
-// commentsPopup();
+}
+closePopup.addEventListener('click', function(e) {
+    
+  event.preventDefault();
+  popup.style.display = 'none';
+})
+popup.addEventListener('click', function(e) {
+if(e.target.classList.contains('popup')) {
+    closePopup.click();
+}
+})
+}
+commentsPopup();
 
 // ------меню, вертикальный слайдер, открытие и закрытие---------
 function Accordion (selector) {

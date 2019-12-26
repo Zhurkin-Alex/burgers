@@ -42,11 +42,17 @@
 	position: fixed;
 	top: rem(90px);
 	right: rem(40px);
-  z-index: 2;
+	z-index: 2;
+	
 	@include tablets{
 		display: none;
 	}
 }
+
+	 
+	
+	
+
 
 .fixed-menu__link {
 	width: rem(16px);
